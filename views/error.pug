@@ -1,6 +1,21 @@
 extends layout
 
 block content
-  h1= message
-  h2= error.status
-  pre #{error.stack}
+  section.page-header
+    .container
+      h1.page-title Oops! Page Not Found
+      p.page-subtitle The page you're looking for seems to have disappeared behind the lens.
+
+  section.error-content
+    .container
+      .error-message
+        h2= message
+        if error.status
+          p.error-status Error #{error.status}
+        if error.stack && (process.env.NODE_ENV === 'development')
+          pre.error-stack= error.stack
+        
+        .error-actions
+          a.btn.btn-primary(href="/") Go Home
+          a.btn.btn-secondary(href="/portfolio") View Portfolio
+          a.btn.btn-secondary(href="/contact") Contact Me

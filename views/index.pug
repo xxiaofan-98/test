@@ -1,5 +1,106 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  section.hero
+    .hero-content
+      h1.hero-title Capturing Life's
+        span.highlight  Beautiful Moments
+      p.hero-subtitle Professional photographer specializing in portraits, weddings, and lifestyle photography
+      .hero-buttons
+        a.btn.btn-primary(href="/portfolio") View Portfolio
+        a.btn.btn-secondary(href="/contact") Get In Touch
+    .hero-image
+      img(src="/images/hero-photo.jpg", alt="Featured Photography")
+
+  section.featured-work
+    .container
+      h2.section-title Featured Work
+      p.section-subtitle A glimpse into my latest photography projects
+      
+      .gallery-grid
+        .gallery-item
+          .image-container
+            img(src="/images/portrait-1.jpg", alt="Portrait Photography")
+            .image-overlay
+              h3 Portrait Sessions
+              p Capturing authentic emotions and personalities
+              a.view-more(href="/portfolio") View More
+        
+        .gallery-item
+          .image-container
+            img(src="/images/wedding-1.jpg", alt="Wedding Photography")
+            .image-overlay
+              h3 Wedding Photography
+              p Documenting your special day with elegance
+              a.view-more(href="/portfolio") View More
+        
+        .gallery-item
+          .image-container
+            img(src="/images/landscape-1.jpg", alt="Landscape Photography")
+            .image-overlay
+              h3 Landscape & Nature
+              p Exploring the beauty of natural world
+              a.view-more(href="/portfolio") View More
+
+  section.about-preview
+    .container
+      .about-content
+        .about-text
+          h2 About Alex Thompson
+          p With over 8 years of experience in professional photography, I specialize in creating timeless images that tell stories and capture emotions. My passion lies in finding the perfect moment and preserving it forever.
+          p From intimate portraits to grand celebrations, I approach each project with creativity, professionalism, and attention to detail.
+          .stats
+            .stat-item
+              .stat-number 500+
+              .stat-label Happy Clients
+            .stat-item
+              .stat-number 1000+
+              .stat-label Photos Captured
+            .stat-item
+              .stat-number 8+
+              .stat-label Years Experience
+          a.btn.btn-primary(href="/about") Learn More About Me
+        
+        .about-image
+          img(src="/images/photographer.jpg", alt="Alex Thompson - Photographer")
+
+  section.testimonials
+    .container
+      h2.section-title What Clients Say
+      .testimonials-grid
+        .testimonial
+          .testimonial-content
+            i.fas.fa-quote-left
+            p "Alex captured our wedding day perfectly. Every emotion, every detail - it was like magic. We couldn't be happier with the results."
+          .testimonial-author
+            img(src="/images/client-1.jpg", alt="Sarah & Mike")
+            .author-info
+              h4 Sarah & Mike
+              p Wedding Clients
+        
+        .testimonial
+          .testimonial-content
+            i.fas.fa-quote-left
+            p "Professional, creative, and so easy to work with. The portrait session was relaxed and the photos turned out absolutely stunning."
+          .testimonial-author
+            img(src="/images/client-2.jpg", alt="Jennifer Lee")
+            .author-info
+              h4 Jennifer Lee
+              p Portrait Client
+        
+        .testimonial
+          .testimonial-content
+            i.fas.fa-quote-left
+            p "Alex's eye for detail and composition is incredible. Our corporate headshots look professional and polished."
+          .testimonial-author
+            img(src="/images/client-3.jpg", alt="David Chen")
+            .author-info
+              h4 David Chen
+              p Corporate Client
+
+  section.cta
+    .container
+      .cta-content
+        h2 Ready to Create Something Beautiful?
+        p Let's work together to capture your special moments
+        a.btn.btn-primary(href="/contact") Start Your Project

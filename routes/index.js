@@ -1,13 +1,33 @@
 var express = require('express');
 var router = express.Router();
 
-var MersenneTwister = require('mersenne-twister');
-var generator = new MersenneTwister();
-
 /* GET home page. */
-// router.get('/', function(req, res, next) {
-//   res.render('index', { title: 'Express' });
-// });
+router.get('/', function(req, res, next) {
+  res.render('index', { title: 'Photography Portfolio - Alex Thompson' });
+});
+
+/* GET portfolio page. */
+router.get('/portfolio', function(req, res, next) {
+  res.render('portfolio', { title: 'Portfolio - Alex Thompson Photography' });
+});
+
+/* GET about page. */
+router.get('/about', function(req, res, next) {
+  res.render('about', { title: 'About - Alex Thompson Photography' });
+});
+
+/* GET contact page. */
+router.get('/contact', function(req, res, next) {
+  res.render('contact', { title: 'Contact - Alex Thompson Photography' });
+});
+
+/* POST contact form submission. */
+router.post('/contact', function(req, res, next) {
+  // In a real application, you would handle the form submission here
+  // For now, just redirect back with a success message
+  console.log('Contact form submitted:', req.body);
+  res.redirect('/contact?success=true');
+});
 
 
 // import { LoremIpsum } from 'lorem-ipsum';

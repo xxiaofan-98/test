@@ -1,0 +1,107 @@
+extends layout
+
+block content
+  section.page-header
+    .container
+      h1.page-title Portfolio
+      p.page-subtitle Explore my collection of photography work across different styles and occasions
+
+  section.portfolio-filters
+    .container
+      .filter-buttons
+        button.filter-btn.active(data-filter="all") All
+        button.filter-btn(data-filter="portraits") Portraits
+        button.filter-btn(data-filter="weddings") Weddings
+        button.filter-btn(data-filter="landscapes") Landscapes
+        button.filter-btn(data-filter="events") Events
+
+  section.portfolio-gallery
+    .container
+      .masonry-grid
+        .portfolio-item(data-category="portraits")
+          .portfolio-image
+            img(src="/images/portfolio/portrait-1.jpg", alt="Portrait Photography")
+            .portfolio-overlay
+              h3 Corporate Headshots
+              p Professional portrait session
+              a.portfolio-link(href="#") 
+                i.fas.fa-expand-arrows-alt
+
+        .portfolio-item(data-category="weddings")
+          .portfolio-image
+            img(src="/images/portfolio/wedding-1.jpg", alt="Wedding Photography")
+            .portfolio-overlay
+              h3 Sarah & Michael's Wedding
+              p Elegant outdoor ceremony
+              a.portfolio-link(href="#") 
+                i.fas.fa-expand-arrows-alt
+
+        .portfolio-item(data-category="landscapes")
+          .portfolio-image
+            img(src="/images/portfolio/landscape-1.jpg", alt="Landscape Photography")
+            .portfolio-overlay
+              h3 Mountain Vista
+              p Natural landscape photography
+              a.portfolio-link(href="#") 
+                i.fas.fa-expand-arrows-alt
+
+        .portfolio-item(data-category="portraits")
+          .portfolio-image
+            img(src="/images/portfolio/portrait-2.jpg", alt="Portrait Photography")
+            .portfolio-overlay
+              h3 Family Portrait
+              p Outdoor family session
+              a.portfolio-link(href="#") 
+                i.fas.fa-expand-arrows-alt
+
+        .portfolio-item(data-category="events")
+          .portfolio-image
+            img(src="/images/portfolio/event-1.jpg", alt="Event Photography")
+            .portfolio-overlay
+              h3 Corporate Event
+              p Annual conference coverage
+              a.portfolio-link(href="#") 
+                i.fas.fa-expand-arrows-alt
+
+        .portfolio-item(data-category="weddings")
+          .portfolio-image
+            img(src="/images/portfolio/wedding-2.jpg", alt="Wedding Photography")
+            .portfolio-overlay
+              h3 Emma & James Wedding
+              p Romantic garden ceremony
+              a.portfolio-link(href="#") 
+                i.fas.fa-expand-arrows-alt
+
+        .portfolio-item(data-category="landscapes")
+          .portfolio-image
+            img(src="/images/portfolio/landscape-2.jpg", alt="Landscape Photography")
+            .portfolio-overlay
+              h3 Coastal Sunset
+              p Golden hour seascape
+              a.portfolio-link(href="#") 
+                i.fas.fa-expand-arrows-alt
+
+        .portfolio-item(data-category="portraits")
+          .portfolio-image
+            img(src="/images/portfolio/portrait-3.jpg", alt="Portrait Photography")
+            .portfolio-overlay
+              h3 Senior Portraits
+              p High school graduation photos
+              a.portfolio-link(href="#") 
+                i.fas.fa-expand-arrows-alt
+
+        .portfolio-item(data-category="events")
+          .portfolio-image
+            img(src="/images/portfolio/event-2.jpg", alt="Event Photography")
+            .portfolio-overlay
+              h3 Birthday Celebration
+              p 50th anniversary party
+              a.portfolio-link(href="#") 
+                i.fas.fa-expand-arrows-alt
+
+  section.portfolio-cta
+    .container
+      .cta-content
+        h2 Like What You See?
+        p Let's discuss your photography needs and create something amazing together
+        a.btn.btn-primary(href="/contact") Book a Session

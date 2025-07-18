@@ -1,56 +1,264 @@
-## Getting Started
+# Photography Portfolio Website
 
-We provide a sample app using Node.js that you can deploy on App Platform. These steps will get this sample application running for you using App Platform.
+A modern, responsive photography portfolio website built with Express.js, Pug templates, and vanilla JavaScript. This website showcases a professional photographer's work with a clean, elegant design that puts the focus on the photography.
 
-**Note: Following these steps may result in charges for the use of DigitalOcean services.**
+## 🌟 Features
 
-### Requirements
+### Design & User Experience
+- **Modern, Clean Design**: Minimalist layout that highlights photography work
+- **Fully Responsive**: Optimized for desktop, tablet, and mobile devices
+- **Smooth Animations**: CSS transitions and JavaScript-powered scroll animations
+- **Interactive Portfolio**: Filterable gallery with category-based sorting
+- **Image Lightbox**: Click-to-expand functionality for detailed photo viewing
+- **Professional Typography**: Beautiful font combinations (Inter + Playfair Display)
 
-* You need a DigitalOcean account. If you don't already have one, you can sign up at https://cloud.digitalocean.com/registrations/new.
+### Pages & Functionality
+- **Homepage**: Hero section, featured work, about preview, testimonials, and call-to-action
+- **Portfolio**: Filterable gallery showcasing different photography categories
+- **About**: Detailed photographer biography, skills, experience, and philosophy
+- **Contact**: Contact form, business information, FAQ, and social links
+- **Error Pages**: Custom 404 and error pages matching the site design
 
-## Deploying the App
+### Technical Features
+- **Express.js Backend**: Robust Node.js server with proper routing
+- **Pug Templates**: Clean, maintainable template engine
+- **Mobile Navigation**: Hamburger menu for mobile devices
+- **Form Handling**: Contact form with validation
+- **SEO Optimized**: Proper meta tags, semantic HTML, and structured content
+- **Performance Optimized**: Lazy loading, optimized images, and efficient CSS
 
-Click this button to deploy the app to the DigitalOcean App Platform. If you are not logged in, you will be prompted to log in with your DigitalOcean account.
+## 🚀 Quick Start
 
-[![Deploy to DigitalOcean](https://www.deploytodo.com/do-btn-blue.svg)](https://cloud.digitalocean.com/apps/new?repo=https://github.com/digitalocean/sample-nodejs/tree/main)
+### Prerequisites
+- Node.js (v14 or higher)
+- npm or yarn
 
-Using this button disables the ability to automatically re-deploy your app when pushing to a branch or tag in your repository as you are using this repo directly.
+### Installation
 
-If you want to automatically re-deploy your app, [fork](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo) the GitHub repository to your account so that you have a copy of it stored to the cloud. Click the **Fork** button in the GitHub repository and follow the on-screen instructions.
+1. **Clone or download the project**
+   ```bash
+   git clone <repository-url>
+   cd photography-portfolio
+   ```
 
-After forking the repo, you should now be viewing this README in your own GitHub org (e.g. `https://github.com/<your-org>/sample-nodejs`). To deploy the new repo, visit https://cloud.digitalocean.com/apps and click **Create App**. Then, click **GitHub**, select the repository you created and select the `main` branch. App Platform will inspect the code, automatically detect the kind of component to create, and use the correct buildpack to create and deploy a container.
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-After clicking the **Deploy to DigitalOcean** button or completing the instructions above to fork the repo, follow these steps:
+3. **Start the development server**
+   ```bash
+   npm start
+   ```
 
-1. Configure the app such as specifying HTTP routes, environment variables or adding a database.
-1. Provide a name for your app and select which region you want to deploy your app to and click **Next**. The closest region to you should be selected by default. All App Platform apps are routed through a global CDN. So this will not affect your app performance, unless it needs to talk to external services.
-1. On the following screen, leave all the fields as they are and click **Next**.
-1. Confirm your **Plan** settings and how many containers you want to launch and click **Launch Basic/Pro App**.
-1. You should see a "Building..." progress indicator. You can click **View Logs** to see more details of the build.
-1. It can take a few minutes for the build to finish, but you can follow the progress in the **Deployments** tab.
-1. Once the build completes successfully, click the **Live App** link in the header and you should see your running application in a new tab, displaying the home page.
+4. **Open in browser**
+   ```
+   http://localhost:3000
+   ```
 
-### Making Changes to Your App
+## 📁 Project Structure
 
-If you followed the steps to fork the repo and used your own copy when deploying the app, you can push changes to your fork and see App Platform automatically re-deploy the update to your app. During these automatic deployments, your application will never pause or stop serving request because App Platform offers zero-downtime deployments.
+```
+photography-portfolio/
+├── public/                 # Static assets
+│   ├── images/            # Photography images
+│   │   └── portfolio/     # Portfolio category images
+│   ├── stylesheets/       # CSS files
+│   │   └── style.css      # Main stylesheet
+│   └── javascripts/       # Client-side JavaScript
+│       └── script.js      # Main JavaScript file
+├── routes/                # Express routes
+│   └── index.js          # Main routing logic
+├── views/                 # Pug templates
+│   ├── layout.pug        # Base layout template
+│   ├── index.pug         # Homepage
+│   ├── portfolio.pug     # Portfolio page
+│   ├── about.pug         # About page
+│   ├── contact.pug       # Contact page
+│   └── error.pug         # Error page
+├── app.js                # Express application setup
+├── package.json          # Dependencies and scripts
+└── README.md            # This file
+```
 
-Here's an example code change you can make for this app:
+## 🎨 Customization Guide
 
-1. Edit code within the repository
-1. Commit the change to the `main` branch. Normally it's a better practice to create a new branch for your change and then merge that branch to `main` after review, but for this demo you can commit to the `main` branch directly.
-1. Visit https://cloud.digitalocean.com/apps and navigate to your sample app.
-1. You should see a "Building..." progress indicator, just like when you first created the app.
-1. Once the build completes successfully, click the **Live App** link in the header and you should see your updated application running. You may need to force refresh the page in your browser (e.g. using **Shift+Reload**).
+### 1. Personal Information
+Update the following files with your personal information:
 
-### Learn More
+**views/layout.pug** - Update photographer name:
+```pug
+a.nav-logo(href="/") Your Name
+```
 
-You can learn more about the App Platform and how to manage and update your application at https://www.digitalocean.com/docs/app-platform/.
+**All template files** - Replace "Alex Thompson" with your name
 
-## Deleting the App
+### 2. Contact Information
+**views/contact.pug** - Update contact details:
+```pug
+p email@yourname.com
+p +1 (555) 123-4567
+p Your City, State
+```
 
-When you no longer need this sample application running live, you can delete it by following these steps:
-1. Visit the Apps control panel at https://cloud.digitalocean.com/apps.
-2. Navigate to the sample app.
-3. In the **Settings** tab, click **Destroy**.
+**views/layout.pug** - Update footer contact info
 
-**Note: If you do not delete your app, charges for using DigitalOcean services will continue to accrue.**
+### 3. Images
+Replace placeholder images in `public/images/` with your actual photography:
+
+- `hero-photo.jpg` - Main hero image (800x600px recommended)
+- `portrait-1.jpg`, `wedding-1.jpg`, `landscape-1.jpg` - Featured work images
+- `photographer.jpg` - Your professional photo
+- `about-photographer.jpg` - About page image
+- `client-1.jpg`, `client-2.jpg`, `client-3.jpg` - Client testimonial photos
+
+**Portfolio images** in `public/images/portfolio/`:
+- Organize by category (portraits, weddings, landscapes, events)
+- Recommended size: 400x350px minimum
+- Use high-quality, web-optimized images
+
+### 4. Content Customization
+
+**Homepage (views/index.pug)**:
+- Update hero title and subtitle
+- Modify about section content
+- Replace testimonials with real client feedback
+- Update statistics in the stats section
+
+**About Page (views/about.pug)**:
+- Write your personal photography journey
+- Update experience and skills sections
+- Modify the timeline with your actual milestones
+- Customize photography philosophy
+
+**Portfolio Page (views/portfolio.pug)**:
+- Add/remove portfolio categories
+- Update project descriptions
+- Ensure `data-category` attributes match filter buttons
+
+### 5. Styling Customization
+
+**Color Scheme** (public/stylesheets/style.css):
+```css
+/* Primary gradient colors */
+background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+
+/* Update these hex values to match your brand */
+--primary-color: #667eea;
+--secondary-color: #764ba2;
+```
+
+**Typography**:
+- Headings: Playfair Display (serif)
+- Body text: Inter (sans-serif)
+- Update font imports in layout.pug if needed
+
+### 6. Social Media Links
+Update social media URLs in:
+- `views/layout.pug` (footer)
+- `views/contact.pug` (contact section)
+
+```pug
+a(href="https://instagram.com/yourusername" aria-label="Instagram")
+```
+
+## 🔧 Advanced Customization
+
+### Adding New Portfolio Categories
+
+1. **Update filter buttons** in `views/portfolio.pug`:
+```pug
+button.filter-btn(data-filter="newcategory") New Category
+```
+
+2. **Add portfolio items** with matching data-category:
+```pug
+.portfolio-item(data-category="newcategory")
+```
+
+3. **CSS styling** is automatic - no changes needed
+
+### Contact Form Integration
+
+The contact form currently logs submissions to console. To integrate with a real backend:
+
+1. **Update the POST route** in `routes/index.js`
+2. **Add email service** (SendGrid, Mailgun, etc.)
+3. **Add database storage** if needed
+
+Example with SendGrid:
+```javascript
+router.post('/contact', async (req, res) => {
+  try {
+    await sendEmail(req.body);
+    res.redirect('/contact?success=true');
+  } catch (error) {
+    res.redirect('/contact?error=true');
+  }
+});
+```
+
+### SEO Optimization
+
+1. **Update meta descriptions** in each template
+2. **Add structured data** for better search engine understanding
+3. **Optimize image alt tags** with descriptive text
+4. **Add sitemap.xml** and robots.txt
+
+## 📱 Mobile Optimization
+
+The website is fully responsive with:
+- Mobile-first CSS approach
+- Touch-friendly navigation
+- Optimized image sizes
+- Readable typography on all devices
+
+## 🌐 Deployment
+
+### Deployment Options
+
+1. **Heroku**:
+   ```bash
+   heroku create your-portfolio-name
+   git push heroku main
+   ```
+
+2. **Netlify**: Deploy from GitHub repository
+
+3. **DigitalOcean**: Use App Platform for easy deployment
+
+4. **Traditional hosting**: Upload files to web server
+
+### Environment Configuration
+
+Create `.env` file for production settings:
+```
+NODE_ENV=production
+PORT=3000
+EMAIL_SERVICE_API_KEY=your_key_here
+```
+
+## 🔍 Browser Support
+
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+- iOS Safari (latest)
+- Chrome Mobile (latest)
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## 📞 Support
+
+If you need help customizing this template or have questions, please create an issue in the repository.
+
+---
+
+**Built with ❤️ for photographers who want to showcase their work beautifully online.**

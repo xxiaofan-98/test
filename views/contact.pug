@@ -1,0 +1,155 @@
+extends layout
+
+block content
+  section.page-header
+    .container
+      h1.page-title Get In Touch
+      p.page-subtitle Ready to capture your special moments? Let's discuss your photography needs
+
+  section.contact-content
+    .container
+      .contact-grid
+        .contact-info
+          h2 Contact Information
+          
+          .contact-item
+            .contact-icon
+              i.fas.fa-envelope
+            .contact-details
+              h3 Email
+              p email@alexthompson.com
+              a(href="mailto:email@alexthompson.com") Send Email
+          
+          .contact-item
+            .contact-icon
+              i.fas.fa-phone
+            .contact-details
+              h3 Phone
+              p +1 (555) 123-4567
+              a(href="tel:+15551234567") Call Now
+          
+          .contact-item
+            .contact-icon
+              i.fas.fa-map-marker-alt
+            .contact-details
+              h3 Location
+              p New York City, NY
+              p Available for travel worldwide
+          
+          .contact-item
+            .contact-icon
+              i.fas.fa-clock
+            .contact-details
+              h3 Response Time
+              p Within 24 hours
+              p Monday - Sunday, 9AM - 8PM
+
+          .social-contact
+            h3 Follow My Work
+            .social-links
+              a(href="#" aria-label="Instagram")
+                i.fab.fa-instagram
+              a(href="#" aria-label="Facebook")
+                i.fab.fa-facebook
+              a(href="#" aria-label="Twitter")
+                i.fab.fa-twitter
+              a(href="#" aria-label="LinkedIn")
+                i.fab.fa-linkedin
+
+        .contact-form-container
+          h2 Send a Message
+          form.contact-form(action="/contact", method="POST")
+            .form-group
+              label(for="name") Full Name *
+              input#name(type="text", name="name", required)
+            
+            .form-group
+              label(for="email") Email Address *
+              input#email(type="email", name="email", required)
+            
+            .form-group
+              label(for="phone") Phone Number
+              input#phone(type="tel", name="phone")
+            
+            .form-group
+              label(for="service") Service Interested In
+              select#service(name="service")
+                option(value="") Select a service
+                option(value="wedding") Wedding Photography
+                option(value="portrait") Portrait Photography
+                option(value="event") Event Photography
+                option(value="commercial") Commercial Photography
+                option(value="other") Other
+            
+            .form-group
+              label(for="date") Preferred Date
+              input#date(type="date", name="date")
+            
+            .form-group
+              label(for="budget") Budget Range
+              select#budget(name="budget")
+                option(value="") Select budget range
+                option(value="under-1000") Under $1,000
+                option(value="1000-2500") $1,000 - $2,500
+                option(value="2500-5000") $2,500 - $5,000
+                option(value="5000-plus") $5,000+
+                option(value="custom") Custom Package
+            
+            .form-group
+              label(for="message") Message *
+              textarea#message(name="message", rows="5", placeholder="Tell me about your photography needs, vision, and any specific requirements...", required)
+            
+            .form-group
+              .checkbox-group
+                input#newsletter(type="checkbox", name="newsletter", value="yes")
+                label(for="newsletter") Subscribe to photography tips and updates
+            
+            button.btn.btn-primary(type="submit") Send Message
+
+  section.faq
+    .container
+      h2.section-title Frequently Asked Questions
+      .faq-grid
+        .faq-item
+          h3 How far in advance should I book?
+          p For weddings, I recommend booking 6-12 months in advance. For other sessions, 2-4 weeks notice is usually sufficient, though I can often accommodate shorter notice depending on availability.
+        
+        .faq-item
+          h3 What's included in your packages?
+          p All packages include professional editing, high-resolution digital images, and online gallery access. Specific inclusions vary by package type - contact me for detailed package information.
+        
+        .faq-item
+          h3 Do you travel for shoots?
+          p Yes! I love destination weddings and travel sessions. Travel fees may apply depending on location and duration. Let's discuss your specific needs.
+        
+        .faq-item
+          h3 How long until I receive my photos?
+          p Wedding galleries are typically delivered within 6-8 weeks. Portrait and event sessions are usually ready within 2-3 weeks. I'll keep you updated throughout the editing process.
+        
+        .faq-item
+          h3 Can I print the photos myself?
+          p Absolutely! You'll receive high-resolution files with print release, allowing you to print wherever you'd like. I can also recommend professional print labs for the best quality.
+        
+        .faq-item
+          h3 What happens if it rains on my outdoor shoot?
+          p I always have backup plans! We can reschedule (weather permitting) or find beautiful covered locations. Some of my favorite photos have been taken in unexpected weather conditions.
+
+  section.testimonials-contact
+    .container
+      h2.section-title What Clients Say
+      .testimonial-slider
+        .testimonial-card
+          .testimonial-content
+            i.fas.fa-quote-left
+            p "From our first conversation to receiving our final gallery, Alex made everything seamless and enjoyable. The photos exceeded our expectations!"
+          .testimonial-author
+            h4 Rachel & Tom
+            p Wedding Clients
+        
+        .testimonial-card
+          .testimonial-content
+            i.fas.fa-quote-left
+            p "Professional, talented, and so easy to work with. Alex captured our family perfectly and made the whole experience fun for our kids."
+          .testimonial-author
+            h4 The Martinez Family
+            p Portrait Clients

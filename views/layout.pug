@@ -1,7 +1,62 @@
 doctype html
-html
+html(lang="en")
   head
-    title= title
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(name="description", content="Professional Photography Portfolio")
+    title= title || "Photography Portfolio"
     link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel="preconnect", href="https://fonts.googleapis.com")
+    link(rel="preconnect", href="https://fonts.gstatic.com", crossorigin)
+    link(href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap", rel="stylesheet")
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css")
   body
-    block content
+    nav.navbar
+      .nav-container
+        a.nav-logo(href="/") Alex Thompson
+        ul.nav-menu
+          li.nav-item
+            a.nav-link(href="/") Home
+          li.nav-item
+            a.nav-link(href="/portfolio") Portfolio
+          li.nav-item
+            a.nav-link(href="/about") About
+          li.nav-item
+            a.nav-link(href="/contact") Contact
+        .hamburger
+          span.bar
+          span.bar
+          span.bar
+
+    main.main-content
+      block content
+
+    footer.footer
+      .footer-content
+        .footer-section
+          h3 Get In Touch
+          p Feel free to reach out for collaborations or inquiries
+          .social-links
+            a(href="#" aria-label="Instagram")
+              i.fab.fa-instagram
+            a(href="#" aria-label="Twitter") 
+              i.fab.fa-twitter
+            a(href="#" aria-label="Facebook")
+              i.fab.fa-facebook
+            a(href="#" aria-label="LinkedIn")
+              i.fab.fa-linkedin
+        .footer-section
+          h3 Contact Info
+          p email@alexthompson.com
+          p +1 (555) 123-4567
+        .footer-section
+          h3 Services
+          ul
+            li Portrait Photography
+            li Wedding Photography
+            li Commercial Photography
+            li Event Photography
+      .footer-bottom
+        p &copy; 2024 Alex Thompson Photography. All rights reserved.
+
+    script(src="/javascripts/script.js")
